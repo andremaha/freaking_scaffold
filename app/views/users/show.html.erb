@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <%= render @user %>
+    <td><%= link_to "Edit this user", edit_user_path(@user) %> <%= button_to "Destroy this user", @user, method: :delete %></td>
+  </tr>
+</table>
+
+<h2>Random Thoughts:</h2>
+
+<% @user.randomthoughts.each do |thought| %>
+<p><em><%= thought.created_at %></em> <%= link_to thought.content, edit_randomthought_path(thought) %></p>
+<% end %>
+
+<div>
+  <%= link_to "Back to users", users_path %>
+</div>

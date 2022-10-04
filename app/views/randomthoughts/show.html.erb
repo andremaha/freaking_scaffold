@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @randomthought %>
+
+<div>
+  <%= link_to "Edit this randomthought", edit_randomthought_path(@randomthought) %> |
+  <%= link_to "Back to randomthoughts", randomthoughts_path %>
+
+  <%= button_to "Destroy this randomthought", @randomthought, method: :delete %>
+</div>

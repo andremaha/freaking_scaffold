@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Randomthoughts</h1>
+
+<div id="randomthoughts">
+  <% @randomthoughts.each do |randomthought| %>
+    <%= render randomthought %>
+    <p>
+      <%= link_to "Show this randomthought", randomthought %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New randomthought", new_randomthought_path %>

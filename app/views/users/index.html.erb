@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table id="users" border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <%= render user %>
+    <td>
+      <%= link_to "Show this user", user %>
+    </td>
+  <% end %>
+  </tr>
+</table>
+
+<%= link_to "New user", new_user_path %>

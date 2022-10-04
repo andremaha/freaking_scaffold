@@ -1,0 +1,2 @@
+module RandomthoughtsHelper
+end
